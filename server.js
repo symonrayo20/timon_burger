@@ -4,7 +4,7 @@ const path = require("path");
 const liveReload = require("livereload");
 const connectliveReload = require("connect-livereload");
 
-const publicDirectory = path.join(__dirname, "./frontend/static");
+const publicDirectory = path.join(__dirname, "frontend/static");
 const liveReloadServer = liveReload.createServer();
 liveReloadServer.watch(publicDirectory);
 liveReloadServer.server.once("connection", () => {
@@ -19,9 +19,9 @@ app.use(connectliveReload());
 // Frontend 
 // app.engine("html", require("ejs").renderFile);
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./frontend/views"));
+app.set("views", path.join(__dirname, "frontend/views"));
  
-app.use("/static", express.static(path.join(__dirname, "./frontend/static")));
+app.use("/static", express.static(path.join(__dirname, "frontend/static")));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

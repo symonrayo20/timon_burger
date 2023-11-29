@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js -e ejs,js,pug,css,html,jpg,png,scss"
+    "dev": "nodemon server.js",
+    "start": "node server.js -e ejs,js,pug,css,html,jpg,png,scss"
   },
   "author": "timon",
   "license": "ISC",
