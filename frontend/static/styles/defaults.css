@@ -1,0 +1,30 @@
+:root {
+    --primary: #dac404;
+    --primaryHover: #dac50480;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+* {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+a { text-decoration: none; }
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px calc(100vh - 120px) repeat(3, 1fr);
+}

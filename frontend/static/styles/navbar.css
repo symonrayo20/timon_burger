@@ -1,0 +1,184 @@
+.nav-main {
+  margin: 0 100px;
+  grid-row: 1/2;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  z-index: 3;
+}
+.nav-main .logo-container {
+  flex: 1;
+}
+.nav-main .menu-container {
+  display: flex;
+  align-items: center;
+}
+.nav-main .menu-container li {
+  cursor: pointer;
+}
+.nav-main .menu-container li a {
+  font-size: 25px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.nav-main .menu-container li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary);
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.nav-main .menu-container li a:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary);
+  transform: scale(1, 1);
+}
+.nav-main .menu-container li span {
+  display: block;
+  width: 2px;
+  height: 50px;
+  background-color: var(--primary);
+}
+.nav-main .menu-container li:nth-child(5) a, .nav-main .menu-container li:nth-child(6) a {
+  margin-right: 0;
+}
+.nav-main .menu-container li:nth-child(5) a::after, .nav-main .menu-container li:nth-child(6) a::after {
+  all: unset;
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .nav-main {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    border-bottom: 2px solid var(--primary);
+  }
+  .nav-main .logo-container {
+    margin-left: 100px;
+  }
+  .nav-main .hamburger-container {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .nav-main .hamburger-container span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+  }
+  .nav-main .hamburger-container:hover span {
+    background-color: var(--primary);
+  }
+  .nav-main .menu-container {
+    position: absolute;
+    background-color: black;
+    width: 220px;
+    top: 122px;
+    padding: 0;
+    right: 100px;
+    flex-direction: column;
+    border: 2px solid var(--primaryHover);
+    transform: scale(1, 0);
+    transform-origin: top;
+  }
+  .nav-main .menu-container li {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .nav-main .menu-container li a {
+    align-items: center;
+  }
+  .nav-main .menu-container li:hover {
+    background-color: var(--primaryHover);
+  }
+  .nav-main .menu-container li a::after, .nav-main .menu-container li a:hover::after {
+    all: unset;
+  }
+  .nav-main .menu-container li:nth-child(4), .nav-main .menu-container li:nth-child(5), .nav-main .menu-container li:nth-child(6) {
+    display: none;
+  }
+  .nav-main .menu-container.show {
+    transform: scale(1, 1);
+    transition: all 0.2s;
+  }
+}
+@media (max-width: 768px) {
+  .nav-main {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    border-bottom: 2px solid var(--primary);
+  }
+  .nav-main .logo-container {
+    margin-left: 100px;
+  }
+  .nav-main .hamburger-container {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .nav-main .hamburger-container span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+  }
+  .nav-main .hamburger-container:hover span {
+    background-color: var(--primary);
+  }
+  .nav-main .menu-container {
+    position: absolute;
+    background-color: black;
+    width: 220px;
+    top: 122px;
+    padding: 0;
+    right: 100px;
+    flex-direction: column;
+    border: 2px solid var(--primaryHover);
+    transform: scale(1, 0);
+    transform-origin: top;
+  }
+  .nav-main .menu-container li {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .nav-main .menu-container li a {
+    align-items: center;
+  }
+  .nav-main .menu-container li:hover {
+    background-color: var(--primaryHover);
+  }
+  .nav-main .menu-container li a::after, .nav-main .menu-container li a:hover::after {
+    all: unset;
+  }
+  .nav-main .menu-container li:nth-child(4), .nav-main .menu-container li:nth-child(5), .nav-main .menu-container li:nth-child(6) {
+    display: none;
+  }
+  .nav-main .menu-container.show {
+    transform: scale(1, 1);
+    transition: all 0.2s;
+  }
+}
+@media (max-width: 576px) {
+  .nav-main .logo-container {
+    margin: 0 50px;
+  }
+  .nav-main .hamburger-container {
+    margin: 0 50px;
+  }
+}/*# sourceMappingURL=navbar.css.map */

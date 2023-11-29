@@ -1,0 +1,95 @@
+.home-section {
+  background-image: url("../assets/images/home-bg.png");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+.home-section .hero-main {
+  margin: 0 100px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+}
+.home-section .hero-main .hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-section .hero-main .hero-text-container h1 {
+  font-size: 80px;
+  margin: 0;
+  font-weight: 400;
+}
+.home-section .hero-main .hero-text-container h1 span {
+  color: var(--primary);
+}
+.home-section .hero-main .hero-text-container p {
+  max-width: 600px;
+  font-size: 34px;
+  font-weight: 100;
+  margin-top: 0;
+}
+.home-section .hero-main .hero-text-container button {
+  width: 250px;
+  height: 59px;
+  background-color: var(--primary);
+  border-radius: 5px;
+  font-size: 27px;
+  font-weight: 400;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  margin-top: 40px;
+}
+.home-section .hero-main .hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+.home-section .hero-main .hero-image-container img {
+  max-height: 424px;
+  max-width: 488px;
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .home-section .hero-main .hero-text-container h1 {
+    font-size: 60px;
+  }
+  .home-section .hero-main .hero-text-container p {
+    font-size: 28px;
+  }
+  .home-section .hero-main .hero-text-container button {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .home-section .hero-main .hero-text-container {
+    grid-column: 1/3;
+  }
+  .home-section .hero-main .hero-text-container button {
+    width: 100%;
+  }
+  .home-section .hero-main .hero-image-container {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .home-section .hero-main {
+    margin: 0 50px;
+  }
+  .home-section .hero-main .hero-text-container h1 {
+    font-size: 50px;
+  }
+  .home-section .hero-main .hero-text-container p {
+    font-size: 25px;
+  }
+  .home-section .hero-main .hero-text-container button {
+    font-size: 23px;
+  }
+}/*# sourceMappingURL=home.css.map */
