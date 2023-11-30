@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <%- include("./partials/link-css.ejs") %>
+</head>
+<body>
+    <div class="main">
+        <%- include("./partials/navbar.ejs") %>
+        <div class="admin-main">
+            <div class="form-wrapper">
+                <div class="form">
+                    <h1>Create Product</h1>
+                    <input type="text" id="cName" placeholder="Enter product name">
+                    <input type="number" id="cPrice" placeholder="Enter product price">
+                    <button id="createProduct">Create</button>
+                </div>
+                <div class="form">
+                    <h1>Update Product</h1>
+                    <input type="text" id="uId" placeholder="Enter product id">
+                    <input type="text" id="uName" placeholder="Enter new product name">
+                    <input type="number" id="uPrice" placeholder="Enter new product price">
+                    <button id="updateProduct">Update</button>
+                </div>
+                <div class="form">
+                    <h1>Delete Product</h1>
+                    <input type="number" id="dId" placeholder="Enter product id">
+                    <button id="deleteProduct">Delete</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <h1>Products List</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (let product of products) { %>
+                        <tr>
+                            <td><%= product.id %></td>
+                            <td><%= product.name %></td>
+                            <td><%= product.price %>:00</td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include("./partials/footer.ejs") %>
+    </div>
+    <script src="static/js/index.js"></script>
+    <script src="static/js/api.js"></script>
+</body>
+</html>

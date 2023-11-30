@@ -13,6 +13,9 @@ liveReloadServer.server.once("connection", () => {
     }, 100);
 })
 
+
+const createTables = require("./backend/db/Table");
+
 const app = express();
 app.use(connectliveReload());
 
@@ -27,14 +30,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-const appRoute = require("./backend/routes/app");
+const adminRoute = require("./backend/routes/Admin");
+const productRoute = require("./backend/routes/Products");
 
-app.use("/", appRoute);
+app.use("/", adminRoute);
+app.use("/", productRoute);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(`listening to port: ${PORT}`);
+    // await create({ name: "Classic Burger", price: 45 });
 }) 
 
 

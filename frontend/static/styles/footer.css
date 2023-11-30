@@ -1,5 +1,5 @@
 .footer-section {
-  grid-row: 5/6;
+  grid-row: -2/-1;
   display: grid;
   grid-auto-rows: 1fr;
 }

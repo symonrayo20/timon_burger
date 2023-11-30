@@ -1,0 +1,49 @@
+.admin-main {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+.admin-main .form-wrapper {
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.admin-main .form-wrapper .form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.admin-main .form-wrapper .form h1 {
+  margin: 0;
+  font-weight: 400;
+}
+.admin-main .form-wrapper .form input {
+  background: transparent;
+  border: 1px solid var(--primaryHover);
+  margin: 10px 0;
+  padding: 10px;
+}
+.admin-main .form-wrapper .form button {
+  background-color: var(--primary);
+  height: 40px;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.admin-main .table-wrapper {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin-main .table-wrapper h1 {
+  font-weight: 400;
+}
+.admin-main .table-wrapper table th, .admin-main .table-wrapper td {
+  border: 1px solid var(--primaryHover);
+  padding: 10px 20px;
+}/*# sourceMappingURL=admin.css.map */

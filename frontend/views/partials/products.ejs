@@ -1,11 +1,12 @@
 <div class="products-section">
     <h2>START YOUR <span>ORDER TODAY</span></h2>
     <div class="products-list">
+        <% for (let product of products) { %>
         <div class="product">
             <div class="hover-details">
                 <div class="price-container">
-                    <p>Bacon <span>Burger</span></p>
-                    <p>PHP 45:00</p>
+                    <p><%= product.name %> <span>Burger</span></p>
+                    <p>PHP <%= product.price %>:00</p>
                 </div>
                 <div class="image-container">
                     <img src="static/assets/images/products-cart-icon.png" alt="product cart icon">
@@ -15,16 +16,17 @@
                 <div class="image-container">
                     <img src="static/assets/images/products-grilled-burger.png" alt="product classic burger">
                 </div>
-                <p>Bacon <span>Burger</span></p>
+                <p><%= product.name %> <span>Burger</span></p>
             </div>
             <div class="price-container">
-                <p>PHP 45:00</p>
+                <p>PHP <%= product.price %>:00</p>
                 <div class="image-container">
                     <img src="static/assets/images/products-cart-icon.png" alt="product cart icon">
                 </div>
             </div>
         </div>
-        <div class="product">
+        <% } %>
+        <!-- <div class="product">
             <div class="hover-details">
                 <div class="price-container">
                     <p>Classic <span>Burger</span></p>
@@ -138,6 +140,6 @@
                     <img src="static/assets/images/products-cart-icon.png" alt="product cart icon">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
